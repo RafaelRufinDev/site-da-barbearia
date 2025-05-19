@@ -9,23 +9,21 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: white;
-  height: 100vh;
   background-image: url('imagens/barbearia fundo.jpg');
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 
 .top-nav {
-  position: absolute;
+  position: relative; /* ou fixed, se quiser que fique sempre visível no topo */
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 20px 30px;
   background: rgba(255, 255, 255, 0.4);
-  z-index: 10;
+  z-index: 100;
 }
 
 .logo {
@@ -45,7 +43,7 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   font-weight: 500;
 }
@@ -58,23 +56,18 @@ nav a.active {
   display: none;
   font-size: 28px;
   cursor: pointer;
-
 }
 
 .contact-form {
   max-width: 600px;
   width: 90%;
   background: #fff;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 100px auto 30px; /* empurra o formulário para baixo do header */
   color: #000;
-  z-index: 10;
+  position: static;
 }
 
 .contact-form h2 {
@@ -128,8 +121,6 @@ nav a.active {
     display: block;
     align-self: flex-end;
     margin-bottom: 10px;
-    top: 100%;
-    left: 90%;
   }
 
   nav#nav-links {
@@ -139,7 +130,7 @@ nav a.active {
     width: 100%;
     padding: 10px 0;
     border-radius: 0 0 10px 10px;
-    z-index: 20;
+    z-index: 90;
   }
 
   nav#nav-links.show {
@@ -162,18 +153,9 @@ nav a.active {
     padding: 10px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .contact-form {
-    max-width: 8000px;
-    width: 90%;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 150px auto;
-    /* adiciona espaço abaixo do header */
-    color: #000;
-    z-index: 10;
-    background-position: cover;
+    padding: 20px;
+    margin: 160px auto 40px; /* mais espaço em telas pequenas */
   }
 }
