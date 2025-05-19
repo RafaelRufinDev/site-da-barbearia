@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barbearia Moderna</title>
   <link rel="stylesheet" href="contatos.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <header class="top-nav">
     <div class="logo">
-      <img src="" alt="Logo" />
-      <span>Prime Barbearia</span>
+      <img src="imagens/logo.png" alt="Logo" />
+      <span class="prime">Prime Barbearia</span>
     </div>
-    <nav>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav id="nav-links">
       <ul>
-        <li><a href="#">Página Inicial</a></li>
-        <li><a href="#">Quem Somos</a></li>
+        <li><a href="inicio.html">Página Inicial</a></li>
+        <li><a href="quemsomos.html">Quem Somos</a></li>
         <li><a href="#">Serviços</a></li>
         <li><a href="galeria.html">Galeria</a></li>
-        <li><a href="contatos.html"class="active">Contatos</a></li>
+        <li><a href="contatos.html" class="active">Contatos</a></li>
       </ul>
     </nav>
+
     <div class="social-icons">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
-    </header>
-   <section class="contact-form">
-  <h2>Entre em Contato</h2>
-  <form action="enviar.php" method="post">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
+  </header>
 
-    <label for="telefone">Telefone:</label>
-    <input type="tel" id="telefone" name="telefone" required>
+  <section class="contact-form">
+    <h2>Entre em Contato</h2>
+    <form action="enviar.php" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
 
-    <label for="servico">Serviço Desejado:</label>
-    <select id="servico" name="servico" required>
-      <option value="">Selecione...</option>
-      <option value="corte">Corte de Cabelo</option>
-      <option value="barba">Barba</option>
-      <option value="combo">Combo Corte + Barba</option>
-    </select>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
 
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+      <label for="servico">Serviço Desejado:</label>
+      <select id="servico" name="servico" required>
+        <option value="">Selecione...</option>
+        <option value="corte">Corte de Cabelo</option>
+        <option value="barba">Barba</option>
+        <option value="combo">Combo Corte + Barba</option>
+      </select>
 
-    <label for="data">Data Preferida:</label>
-    <input type="date" id="data" name="data">
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
 
-    <label for="hora">Horário Preferido:</label>
-    <input type="time" id="hora" name="hora">
+      <label for="data">Data Preferida:</label>
+      <input type="date" id="data" name="data">
 
-    <button type="submit">Enviar</button>
-  </form>
-</section>
+      <label for="hora">Horário Preferido:</label>
+      <input type="time" id="hora" name="hora">
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
+
 </html>

@@ -2,44 +2,45 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Barbearia Moderna</title>
-    <link rel="stylesheet" href="galeria.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="galeria.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- para ícones sociais -->
 </head>
 
 <body>
-<header class="top-nav">
-    <div class="logo">
-        <img src="" alt="Logo" />
-        <span>Prime Barbearia</span>
-    </div>
+    <header class="top-nav">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo" />
+            <span>Prime Barbearia</span>
+        </div>
 
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
 
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="inicio.html">Página Inicial</a></li>
-            <li><a href="#">Quem Somos</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="galeria.html" class="active">Galeria</a></li>
-            <li><a href="#">Contatos</a></li>
-        </ul>
-    </nav>
+        <nav id="nav-links">
+            <ul>
+                <li><a href="inicio.html">Página Inicial</a></li>
+                <li><a href="quemsomos.html" class="active">Quem Somos</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+            </ul>
+        </nav>
 
-    <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
-</header>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </header>
 
     <section class="galeria-section" id="galeria">
         <h2>Galeria de Estilos</h2>
         <div class="galeria-grid">
             <div class="galeria-card">
-                <img src="imagens/cliente Bruno.jpeg" alt="Corte degradê navalhado, barba e sobrancelha">
+                <img src="imagens/cliente Bruno.jpeg" alt="Corte degradê navalhado, barba e sobrancelha" />
                 <div class="galeria-info">
                     <h3>Corte degradê navalhado, barba e sobrancelha</h3>
                     <p>Cliente: Bruno</p>
@@ -47,7 +48,7 @@
             </div>
 
             <div class="galeria-card">
-                <img src="caminho/cliente2.jpg" alt="Desenho de barba detalhado">
+                <img src="imagens/cliente2.jpg" alt="Desenho de barba detalhado" />
                 <div class="galeria-info">
                     <h3>Desenho de barba detalhado</h3>
                     <p>Cliente: Rafael</p>
@@ -55,7 +56,15 @@
             </div>
 
             <div class="galeria-card">
-                <img src="caminho/cliente3.jpg" alt="Corte moicano com fade">
+                <img src="imagens/cliente3.jpg" alt="Corte moicano com fade" />
+                <div class="galeria-info">
+                    <h3>Corte moicano com fade</h3>
+                    <p>Cliente: Lucas</p>
+                </div>
+            </div>
+
+            <div class="galeria-card">
+                <img src="imagens/cliente3.jpg" alt="Corte moicano com fade" />
                 <div class="galeria-info">
                     <h3>Corte moicano com fade</h3>
                     <p>Cliente: Lucas</p>
@@ -63,6 +72,15 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>

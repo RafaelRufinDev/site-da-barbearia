@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,6 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  height: 100%;
   color: white;
   height: 100vh;
   background-image: url('imagens/barbearia\ fundo.jpg');
@@ -23,7 +23,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.4);
   z-index: 10;
 }
 
@@ -58,6 +58,11 @@ nav a.active {
   margin-left: 15px;
   font-size: 18px;
 }
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
 
 .overlay {
   background: rgba(0, 0, 0, 0.3);
@@ -82,4 +87,76 @@ nav a.active {
   font-size: 60px;
   letter-spacing: 8px;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.1px;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    color: white;
+    margin-top: 10px;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(92, 90, 90, 0.95);
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  #nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  #nav-links ul li {
+    width: 100%;
+  }
+
+  #nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  #nav-links a:hover {
+    color: #f5c518;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .social-icons a {
+    color: #fff;
+  }
+
+  /* nessa parte eu diminui o nome barbearia*/
+  .overlay h1 {
+    font-size: 40px;
+  }
 }
