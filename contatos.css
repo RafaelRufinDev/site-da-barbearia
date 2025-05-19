@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,9 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  height: 100%;
   color: white;
   height: 100vh;
-  background-image: url('imagens/barbearia\ fundo.jpg');
+  background-image: url('imagens/barbearia fundo.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -23,7 +24,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.4);
   z-index: 10;
 }
 
@@ -53,23 +54,18 @@ nav a.active {
   color: #f5c518;
 }
 
-.social-icons a {
-  color: rgb(4, 0, 0);
-  margin-left: 15px;
-  font-size: 18px;
-}
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f0f0f0;
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+
 }
 
 .contact-form {
   max-width: 600px;
   width: 90%;
   background: #fff;
-  padding: 30px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: auto;
@@ -78,6 +74,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #000;
+  z-index: 10;
 }
 
 .contact-form h2 {
@@ -98,7 +95,6 @@ body, html {
   margin-top: 5px;
   border: 1px solid #000000;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 .contact-form button {
@@ -115,4 +111,69 @@ body, html {
 
 .contact-form button:hover {
   background-color: #444;
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    top: 100%;
+    left: 90%;
+  }
+
+  nav#nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(92, 90, 90, 0.95);
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    z-index: 20;
+  }
+
+  nav#nav-links.show {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .contact-form {
+    max-width: 8000px;
+    width: 90%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 150px auto;
+    /* adiciona espaço abaixo do header */
+    color: #000;
+    z-index: 10;
+    background-position: cover;
+  }
 }

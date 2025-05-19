@@ -2,56 +2,73 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia Moderna</title>
-    <link rel="stylesheet" href="quemsomos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbearia Moderna</title>
+  <link rel="stylesheet" href="quemsomos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <header class="top-nav">
-        <div class="logo">
-            <img src="" alt="Logo" />
-            <span>Prime Barbearia</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Página Inicial</a></li>
-                <li><a href="quemsomos.html">Quem Somos</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="galeria.html" class="active">Galeria</a></li>
-                <li><a href="#">Contatos</a></li>
-            </ul>
-        </nav>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </header>
-    <main class="quem-somos">
-        <h1>Quem Somos</h1>
-        <p>
-            Mais do que uma barbearia, somos um ponto de encontro para estilo, personalidade e boas conversas.
-            Fundada por quatro amigos apaixonados pela arte da barbearia:
-            <strong>Pedro Henrique, Rafael Rufino, João Henrique e Bruno Coatti</strong>, nossa missão é oferecer mais do
-            que um corte: queremos proporcionar uma experiência completa.
-        </p>
-        <p>
-            Unimos tradição e modernidade para atender todos os estilos, do clássico ao contemporâneo, sempre com
-            excelência, atenção aos detalhes e um atendimento de primeira. Cada um de nós traz uma bagagem única,
-            mas compartilhamos o mesmo propósito: elevar a autoestima de cada cliente que passa pela nossa cadeira.
-        </p>
-        <p>
-            Aqui, cada atendimento é personalizado, cada barba feita com precisão e cada corte pensado para valorizar
-            o que há de melhor em você.
-        </p>
-        <p>
-            Seja bem-vindo à nossa barbearia! Onde o estilo ganha forma e a confiança renasce a cada visita.
-        </p>
-    </main>
-    
+  <header class="top-nav">
+    <div class="logo">
+      <img src="imagens/logo.png" alt="Logo" />
+      <span>Prime Barbearia</span>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav id="nav-links">
+      <ul>
+        <li><a href="inicio.html">Página Inicial</a></li>
+        <li><a href="quemsomos.html" class="active">Quem Somos</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contatos.html">Contatos</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </header>
+
+  <div class="quem-somos">
+    <div class="container-branco">
+      <h1>Quem Somos</h1>
+      <p>
+        Mais do que uma barbearia, somos um ponto de encontro para estilo, personalidade e boas conversas.
+        Fundada por quatro amigos apaixonados pela arte da barbearia:
+        <strong>Pedro Henrique, Rafael Rufino, João Henrique e Bruno Coatti</strong>, nossa missão é oferecer mais do
+        que um corte: queremos proporcionar uma experiência completa.
+      </p>
+      <p>
+        Unimos tradição e modernidade para atender todos os estilos, do clássico ao contemporâneo, sempre com
+        excelência, atenção aos detalhes e um atendimento de primeira. Cada um de nós traz uma bagagem única,
+        mas compartilhamos o mesmo propósito: elevar a autoestima de cada cliente que passa pela nossa cadeira.
+      </p>
+      <p>
+        Aqui, cada atendimento é personalizado, cada barba feita com precisão e cada corte pensado para valorizar
+        o que há de melhor em você.
+      </p>
+      <p>
+        Seja bem-vindo à nossa barbearia! Onde o estilo ganha forma e a confiança renasce a cada visita.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>
