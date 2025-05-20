@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -14,11 +15,15 @@ body {
   background-position: center;
   position: relative;
 }
+span{
+  color: #000000;
+}
 
 .top-nav {
   position: absolute;
   top: 0;
   width: 100%;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,7 +38,7 @@ body {
 }
 
 .logo img {
-  height: 30px;
+  height: 80px;
   margin-right: 10px;
 }
 
@@ -58,6 +63,7 @@ nav a.active {
   margin-left: 15px;
   font-size: 18px;
 }
+
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -145,18 +151,4 @@ nav a.active {
   #nav-links a:hover {
     color: #f5c518;
   }
-
-  .social-icons {
-    justify-content: center;
-    margin-top: 15px;
   }
-
-  .social-icons a {
-    color: #fff;
-  }
-
-  /* nessa parte eu diminui o nome barbearia*/
-  .overlay h1 {
-    font-size: 40px;
-  }
-}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Moderna</title>
+    <link rel="stylesheet" href="serviços.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="top-nav">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo" />
+            <span>Prime Barbearia</span>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav id="nav-links">
+            <ul>
+                <li><a href="inicio.html">Página Inicial</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><a href="#" class="active">Serviços</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tabela de Valores e Serviços</h1>
+        <p>Segue abaixo os nossos serviços: cortes de cabelo, barba e sobrancelha.</p>
+
+        <section class="tabela-de-valores">
+
+            <div class="tabela">
+                <img src="imagens/corte social.png" alt="Corte simples e degradê">
+                <p><strong>Valor:</strong> R$20</p>
+                <p><strong>Descrição:</strong> Corte simples e degradê</p>
+            </div>
+
+            <div class="tabela">
+                <img src="imagens/Corte degrade.png" alt="Degradê navalhado">
+                <p><strong>Valor:</strong> R$25</p>
+                <p><strong>Descrição:</strong> Degradê</p>
+            </div>
+
+            <div class="tabela">
+                <img src="imagens/Corte e luzes.png" alt="Corte e luzes">
+                <p><strong>Valor:</strong> R$50</p>
+                <p><strong>Descrição:</strong> Corte e luzes</p>
+            </div>
+
+            <div class="tabela">
+                <img src="imagens/Pigmentado e Corte.png" alt="Pigmentado e corte">
+                <p><strong>Valor:</strong> R$45</p>
+                <p><strong>Descrição:</strong> Pigmentado e corte</p>
+            </div>
+
+            <div class="tabela">
+                <img src="imagens/Barba.png" alt="Barba">
+                <p><strong>Valor:</strong> R$10</p>
+                <p><strong>Descrição:</strong> Barba</p>
+            </div>
+
+            <div class="tabela">
+                <img src="imagens/Sobrancelha.png" alt="Sobrancelha">
+                <p><strong>Valor:</strong> R$5</p>
+                <p><strong>Descrição:</strong> Sobrancelha</p>
+            </div>
+
+            <div class="tabela">
+                <img src="imagens/Alisamento.png" alt="Corte e alisamento">
+                <p><strong>Valor:</strong> R$35</p>
+                <p><strong>Descrição:</strong> Alisamento</p>
+            </div>
+
+            <div class="tabela">
+                <img src="imagens/Corte navalhado e Barba.png" alt="Navalhado e barba">
+                <p><strong>Valor:</strong> R$30</p>
+                <p><strong>Descrição:</strong> Navalhado e barba</p>
+            </div>
+
+            <div class="tabela">
+                <img src="imagens/Nevou  e corte.png" alt="Nevou e corte">
+                <p><strong>Valor:</strong> R$80</p>
+                <p><strong>Descrição:</strong> Nevou e corte</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
