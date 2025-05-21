@@ -16,7 +16,7 @@ body {
   position: relative;
 }
 span{
-  color: #000000;
+  color: hsl(0, 0%, 100%);
 }
 
 .top-nav {
@@ -25,10 +25,10 @@ span{
   width: 100%;
   height: 50px;
   display: flex;
-  align-items: center;
+  align-items: auto;
   justify-content: space-between;
   padding: 20px 50px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(51, 47, 47, 0.562);
   z-index: 10;
 }
 
@@ -49,7 +49,7 @@ nav ul {
 }
 
 nav a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
 }
@@ -69,39 +69,40 @@ nav a.active {
   font-size: 28px;
   cursor: pointer;
 }
+.quem-somos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 100px 20px 20px;
+}
 
-  .quem-somos {
-    display: flex;
-    justify-content: center;
+.container-branco {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+@media (max-width: 768px) {
+
+ .top-nav {
+    flex-direction: row;
     align-items: center;
-    width: 100%;
-    padding: 100px 20px 20px;
-  }
-
-  .container-branco {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 50px auto;
-    max-width: 800px;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: black;
-  }
-
-  p {
-    color: black;
-  }
-
-  @media (max-width: 768px) {
-   .top-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.1px;
+    justify-content: space-between;
+    padding: 10px 20px;
   }
 
   .logo span {
@@ -110,9 +111,13 @@ nav a.active {
 
   .menu-toggle {
     display: block;
-    align-self: flex-end;
-    color: white;
-    margin-top: 10px;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    outline: none;
   }
 
   #nav-links {
@@ -120,7 +125,7 @@ nav a.active {
     flex-direction: column;
     background: rgba(92, 90, 90, 0.95);
     position: absolute;
-    top: 85px;
+    top: 50px;
     left: 0;
     width: 100%;
     padding: 20px 0;
@@ -162,4 +167,5 @@ nav a.active {
   .social-icons a {
     color: #fff;
   }
-  }
+
+}

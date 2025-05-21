@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barbearia Moderna</title>
   <link rel="stylesheet" href="contatos.css">
+  <script src="geral.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -17,9 +18,7 @@
       <span class="prime">Prime Barbearia</span>
     </div>
 
-    <div class="menu-toggle" id="menu-toggle">
-      ☰
-    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
     <nav id="nav-links">
       <ul>
@@ -39,7 +38,7 @@
 
   <section class="contact-form">
     <h2>Entre em Contato</h2>
-    <form action="enviar.php" method="post">
+    <form method="post" action="obrigado.html">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required>
 
@@ -63,18 +62,9 @@
       <label for="hora">Horário Preferido:</label>
       <input type="time" id="hora" name="hora">
 
-      <button type="submit">Enviar</button>
+      <input type="submit">Enviar</input>
     </form>
   </section>
-
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
 </body>
 
 </html>
